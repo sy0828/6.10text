@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本数据类型 作为参数 传递 函数内部会创建该数据的副本,
+        // 一切修改不会影响传进来的数据本身
+        var x = 1;
+
+        function ins(x){
+            x = x + 1;
+            // 形参x相当于在函数体内部声明了 变量x
+            
+        }
+        ins(x);
+        console.log(x);
+    
+        // 复杂数据类型 作为参数传递
+        // 在函数内部对该参数的修改 会直接影响带函数外部的该参数
+        // 因为本质上它们是同一个对象
+        var n = 3;
+        var arr = [1, 2];
+        function foo(arr,n){
+            arr.push(n)
+        }
+        foo(arr,n);
+        console.log(arr);
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    函数程序运行后的结果外部需要使用的时候,我们不能拿到
+    // 需要通过return返回
+    // 需要在外部用一个变量 接受返回值
+    
+    // 函数使用return语句后,这个函数会在执行完return语句之后停止
+    // 并立即退出
+    // 也就是说return后面的所有其他代码都不会执行
+    
+    // 函数里边可以没有return 
+    function add(x, y){
+        // sum 在函数体内部
+        // 函数体外是无法使用的
+        var sum = x + y;
+        return sum;
+        console.log(sum);
+    }
+    var temp = add(3, 5);
+    console.log(temp);
+    //  console.log(sum);
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

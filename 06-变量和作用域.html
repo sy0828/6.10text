@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    在最外层声明的变量
+    // 创建的变量都会作为Window对象的属性保存
+    // 创建的函数都会作为window对象的方法保存
+    // 在函数体内部  但是没有声明var 的变量也是全局变量
+    // 在页面的任意的部分都可以访问的到
+    var a = 1;
+    // 全局变量(最外层)
+    function aoo(){
+        sum = 9;
+        // 没有用var 声明 全局变量 不推荐这样写 错误写法
+        console.log(a);
+        // 全局变量 在页面的任意地方都可以使用拿到
+    }
+    console.log(window);
+    console.log(a);
+    console.log(window.a);
+    aoo();
+    console.log(sum);
+
+    // 在函数体内部的声明的变量
+    // 如果一个变量在函数体内部声明,则该变量的作用域为整个函数体,
+    // 在函数体外不可引用该变量
+    function foo(){
+        var x = 1;
+        // 局部变量
+    }
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    当在函数作用域操作一个变量时,他会在自身作用域寻找
+    // 如果有就直接使用(就近原则),如果没有则向上一级作用域寻找,
+    // 直到找到全局作用域,如果全局作用域中依然没有找到,则会报错
+
+    // 换句话来讲,就是当前作用域中,
+    // 可以使用其父级作用域的变量
+    // 但是不能使其(兄弟作用域和后代作用域)的变量
+    // (在我这里声明的变量,除了我能用,就是我的后代能用)
+     
+    //  在函数中访问全局变量可以使用window对象(比如说,全局作用域和
+    //  函数作用域都定义了变量a,如果想访问全局变量,可以使用window.a)
+    
+    
+    var x = 2;
+    function foo(){
+        var x = 1
+        // 局部变量
+         function bar(){
+             var y = x + 1;
+             var z = 100;
+             console.log(x);
+         }
+         
+         function ins() {
+                x++;
+                y++;
+                var z = 1000;
+                //  能使用bar 函数里边的变量吗?
+            }
+            bar();
+    }
+    foo()
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
